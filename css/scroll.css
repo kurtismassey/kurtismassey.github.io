@@ -1,0 +1,70 @@
+/**
+ * Scroll indicator styles
+ */
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.scroll-indicator.visible {
+    opacity: 0.6;
+}
+
+.scroll-arrow {
+    width: 20px;
+    height: 20px;
+    border-right: 2px solid var(--matrix-green);
+    border-bottom: 2px solid var(--matrix-green);
+    transform: rotate(45deg);
+    position: relative;
+    margin-bottom: 0.5rem;
+}
+
+.scroll-arrow::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    right: -1px;
+    width: 2px;
+    height: 2px;
+    background: var(--matrix-green);
+    border-radius: 50%;
+    box-shadow:
+        0 2px 8px var(--glow-color),
+        0 4px 12px rgba(0, 255, 136, 0.5);
+    transform: translate(50%, 50%);
+}
+
+.scroll-indicator.visible .scroll-arrow {
+    animation: subtle-bounce 2s ease-in-out infinite;
+}
+
+.scroll-text {
+    font-family: "Courier New", "Monaco", monospace;
+    font-size: 0.7rem;
+    color: var(--matrix-green);
+    text-transform: lowercase;
+    letter-spacing: 0.1em;
+    text-shadow: 0 0 4px var(--glow-color);
+}
+
+@keyframes subtle-bounce {
+    0%,
+    100% {
+        transform: translateY(0) rotate(45deg);
+    }
+    50% {
+        transform: translateY(10px) rotate(45deg);
+    }
+}

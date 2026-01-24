@@ -1,0 +1,83 @@
+/**
+ * Layout styles
+ */
+
+/* Main Container */
+.container {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+}
+
+/* Section Full Viewport */
+.section-full {
+    min-height: 100vh;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    padding: 2rem;
+    padding-top: 3.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.section-content {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 3rem;
+    max-height: calc(100vh - 6rem);
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 255, 136, 0.3) transparent;
+}
+
+.section-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.section-content::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.section-content::-webkit-scrollbar-thumb {
+    background: rgba(0, 255, 136, 0.3);
+    border-radius: 3px;
+}
+
+.section-content::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 255, 136, 0.5);
+}
+
+/* Header */
+.header {
+    text-align: left;
+    padding: 2rem 0;
+    font-family: "Courier New", "Monaco", monospace;
+}
+
+/* Sections */
+.section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+        opacity 0.6s ease,
+        transform 0.6s ease;
+}
+
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Section Title */
+.section-title {
+    font-size: 1.75rem;
+    color: var(--matrix-green);
+    margin-bottom: 2rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
