@@ -158,7 +158,7 @@ function animateAboutTerminal() {
                 setTimeout(() => {
                     const separator = document.createElement('div');
                     separator.className = 'terminal-separator';
-                    separator.textContent = '─'.repeat(60);
+                    separator.textContent = '─'.repeat(40);
                     separator.style.color = 'var(--border-color)';
                     separator.style.margin = '1.5rem 0';
                     outputContainer.appendChild(separator);
@@ -212,7 +212,7 @@ function animateAboutTerminal() {
                                                         skillsSeparator.className =
                                                             'terminal-separator';
                                                         skillsSeparator.textContent =
-                                                            '─'.repeat(60);
+                                                            '─'.repeat(40);
                                                         skillsSeparator.style.color =
                                                             'var(--border-color)';
                                                         skillsSeparator.style.margin =

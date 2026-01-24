@@ -31,6 +31,7 @@
     padding-bottom: 3rem;
     max-height: calc(100vh - 6rem);
     overflow-y: auto;
+    overflow-x: hidden;
     scrollbar-width: thin;
     scrollbar-color: rgba(0, 255, 136, 0.3) transparent;
 }

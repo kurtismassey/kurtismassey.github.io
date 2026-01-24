@@ -4,36 +4,86 @@
 
 @media (max-width: 768px) {
     .section-full {
-        padding: 1.5rem;
+        padding: 0.75rem;
+        padding-top: 2.5rem;
+        align-items: flex-start;
+    }
+
+    #home.section-full {
+        align-items: center;
+    }
+
+    #home .terminal-output {
+        min-height: 180px;
+    }
+
+    .section-content {
+        max-height: calc(100vh - 4rem);
+        padding-bottom: 2.5rem;
     }
 
     .scroll-indicator {
-        bottom: 2rem;
+        bottom: 1rem;
     }
 
     .scroll-arrow {
-        width: 20px;
-        height: 20px;
+        width: 16px;
+        height: 16px;
     }
 
     .scroll-text {
-        font-size: 0.65rem;
+        font-size: 0.55rem;
+    }
+
+    .header {
+        padding: 0.5rem 0;
     }
 
     .terminal-line {
-        font-size: 0.95rem;
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
     }
 
     .terminal-name {
-        font-size: 1.75rem;
+        font-size: 1.6rem;
     }
 
     .terminal-subtitle {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 
     .terminal-output {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
+        margin-top: 0.75rem;
+        min-height: auto;
+    }
+
+    .terminal-header {
+        margin-bottom: 0.5rem;
+        padding: 0.25rem 0;
+        font-size: 0.8rem;
+    }
+
+    .section-title {
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+    }
+
+    .about-terminal {
+        min-height: auto;
+        padding: 0.75rem;
+    }
+
+    .about-terminal .terminal-output {
+        min-height: auto;
+        margin-top: 0.5rem;
+    }
+
+    .terminal-separator {
+        overflow: hidden;
+        text-overflow: clip;
+        max-width: 100%;
+        margin: 0.75rem 0 !important;
     }
 
     .menu-bar {
@@ -92,54 +142,211 @@
         height: 14px;
     }
 
+    .experience-terminal {
+        margin-top: 0.75rem;
+    }
+
     .experience-block {
         padding: 0.5rem 0.75rem;
-    }
-
-    .experience-description {
-        font-size: 0.8rem;
-    }
-
-    .tech-tag {
-        font-size: 0.65rem;
-        padding: 0.15rem 0.4rem;
-    }
-
-    .cert-terminal-output {
-        padding: 0.75rem 1rem;
-        font-size: 0.8rem;
-    }
-
-    .home-category-badge {
-        font-size: 0.75rem;
-        padding: 0.2rem 0.5rem;
-    }
-
-    #contributions-output {
-        font-size: 0.75rem;
-        padding: 1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .terminal-name {
-        font-size: 1.5rem;
-    }
-
-    .home-category-badge {
-        font-size: 0.65rem;
-        padding: 0.15rem 0.4rem;
-    }
-
-    .section-title {
-        font-size: 1.5rem;
-    }
-
-    .about-terminal {
-        padding: 1rem;
+        margin-left: 0;
+        margin-bottom: 0.5rem;
     }
 
     .experience-block::before {
         display: none;
+    }
+
+    .experience-org-header {
+        margin-bottom: 0.5rem;
+        padding-bottom: 0.35rem;
+    }
+
+    .experience-role {
+        padding-left: 0.5rem;
+        margin-left: 0.25rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .experience-title {
+        font-size: 0.8rem;
+        word-break: break-word;
+    }
+
+    .experience-duration {
+        margin-left: 0.5rem;
+        font-size: 0.7rem;
+        margin-bottom: 0.35rem;
+    }
+
+    .experience-description {
+        font-size: 0.75rem;
+        margin-left: 0.5rem;
+        line-height: 1.4;
+        margin-bottom: 0.35rem;
+    }
+
+    .experience-tech {
+        margin-left: 0.5rem;
+        margin-top: 0.35rem;
+        padding-top: 0.35rem;
+    }
+
+    .tech-tag {
+        font-size: 0.6rem;
+        padding: 0.15rem 0.35rem;
+    }
+
+    .certifications-terminal {
+        margin-top: 0.75rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .cert-terminal-output {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.75rem;
+        overflow-x: hidden;
+    }
+
+    .cert-category-header {
+        font-size: 0.8rem;
+        margin: 0.5rem 0 0.35rem 0;
+    }
+
+    .cert-terminal-line {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.2rem;
+        padding-left: 0.5rem;
+        font-size: 0.7rem;
+        line-height: 1.3;
+        margin: 0.25rem 0;
+    }
+
+    .cert-name-inline {
+        word-break: break-word;
+    }
+
+    .cert-meta-inline {
+        display: block;
+        width: 100%;
+        margin-left: 1rem;
+        font-size: 0.6rem;
+    }
+
+    .cert-link-inline {
+        margin-left: 0;
+    }
+
+    .home-category-badge {
+        font-size: 0.7rem;
+        padding: 0.15rem 0.4rem;
+    }
+
+    #contributions-output {
+        font-size: 0.65rem;
+        padding: 0.5rem 0.75rem;
+        white-space: pre-wrap;
+        word-break: break-word;
+        overflow-x: hidden;
+        max-height: calc(100vh - 10rem);
+        line-height: 1.4;
+    }
+
+    .skills-legend {
+        gap: 0.5rem;
+        font-size: 0.6rem;
+        margin-bottom: 0.5rem !important;
+    }
+
+    .about-skill-badge {
+        font-size: 0.6rem;
+        padding: 0.15rem 0.35rem;
+    }
+
+    .about-skills-wrapper {
+        gap: 0.25rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-full {
+        padding: 0.5rem;
+        padding-top: 2.25rem;
+    }
+
+    #home.section-full {
+        align-items: center;
+    }
+
+    #home .terminal-output {
+        min-height: 160px;
+    }
+
+    .section-content {
+        max-height: calc(100vh - 3.5rem);
+        padding-bottom: 2rem;
+    }
+
+    .terminal-name {
+        font-size: 1.35rem;
+    }
+
+    .terminal-subtitle {
+        font-size: 0.8rem;
+        gap: 0.35rem;
+    }
+
+    .home-category-badge {
+        font-size: 0.6rem;
+        padding: 0.1rem 0.3rem;
+    }
+
+    .section-title {
+        font-size: 1.25rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .terminal-header {
+        font-size: 0.75rem;
+        margin-bottom: 0.35rem;
+    }
+
+    .about-terminal {
+        padding: 0.5rem;
+    }
+
+    .experience-company {
+        font-size: 0.75rem;
+    }
+
+    .experience-title {
+        font-size: 0.7rem;
+    }
+
+    .cert-terminal-line {
+        font-size: 0.6rem;
+    }
+
+    .cert-meta-inline {
+        font-size: 0.55rem;
+    }
+
+    #contributions-output {
+        font-size: 0.5rem;
+        padding: 0.4rem 0.5rem;
+        line-height: 1.35;
+    }
+
+    .scroll-indicator {
+        bottom: 0.75rem;
+    }
+
+    .scroll-arrow {
+        width: 14px;
+        height: 14px;
+    }
+
+    .scroll-text {
+        font-size: 0.5rem;
     }
 }

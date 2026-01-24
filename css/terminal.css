@@ -36,7 +36,7 @@
     line-height: 1.8;
     font-size: 1rem;
     margin-top: 1.5rem;
-    min-height: 280px;
+    min-height: 200px;
     transition: opacity 0.3s ease;
 }
 
@@ -157,11 +157,11 @@
     border-radius: 4px;
     border: 1px solid var(--border-color);
     box-shadow: 0 0 20px rgba(0, 255, 136, 0.1);
-    min-height: 400px;
+    min-height: auto;
 }
 
 .about-terminal .terminal-output {
-    min-height: 350px;
+    min-height: auto;
 }
 
 .terminal-separator {
@@ -175,13 +175,14 @@
     min-height: auto;
     max-height: 60vh;
     overflow-y: auto;
-    overflow-x: auto;
+    overflow-x: hidden;
     padding: 1.5rem;
     background: rgba(0, 0, 0, 0.4);
     border-radius: 6px;
     border: 1px solid rgba(0, 255, 136, 0.2);
     font-family: "Courier New", "Monaco", "Consolas", monospace;
-    white-space: pre;
+    white-space: pre-wrap;
+    word-break: break-word;
     font-size: 0.85rem;
     line-height: 1.6;
     box-shadow: 0 0 20px rgba(0, 255, 136, 0.1);
