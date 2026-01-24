@@ -19,6 +19,8 @@
 
 .scroll-indicator.visible {
     opacity: 0.6;
+    pointer-events: auto;
+    cursor: pointer;
 }
 
 .scroll-arrow {

@@ -617,6 +617,28 @@ function initScrollIndicators() {
             const section = indicator.closest('.section-full');
 
             if (section && section !== lastSection) {
+                indicator.style.pointerEvents = 'auto';
+                indicator.style.cursor = 'pointer';
+
+                // Add click handler to scroll to next section
+                indicator.addEventListener('click', () => {
+                    const currentSection = indicator.closest('.section-full');
+                    if (!currentSection) return;
+
+                    // Find all sections in order
+                    const sectionsArray = Array.from(allSections);
+                    const currentIndex = sectionsArray.indexOf(currentSection);
+
+                    // Get next section
+                    if (currentIndex !== -1 && currentIndex < sectionsArray.length - 1) {
+                        const nextSection = sectionsArray[currentIndex + 1];
+                        nextSection.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start',
+                        });
+                    }
+                });
+
                 // Wait for section content
                 const observer = new IntersectionObserver(
                     (entries) => {
