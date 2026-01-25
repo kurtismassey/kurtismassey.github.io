@@ -18,6 +18,7 @@
     justify-content: center;
     scroll-snap-align: start;
     scroll-snap-stop: always;
+    scroll-margin-top: 32px; /* Offset for fixed header */
     padding: 2rem;
     padding-top: 3.5rem;
     position: relative;

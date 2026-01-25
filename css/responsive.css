@@ -18,8 +18,12 @@
     }
 
     .section-content {
-        max-height: calc(100vh - 4rem);
-        padding-bottom: 2.5rem;
+        max-height: calc(100vh - 5rem);
+        padding-bottom: 3rem;
+        padding-top: 0;
+        overflow-y: auto;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
     }
 
     .scroll-indicator {
@@ -59,14 +63,21 @@
     }
 
     .terminal-header {
-        margin-bottom: 0.5rem;
-        padding: 0.25rem 0;
-        font-size: 0.8rem;
+        margin-top: 0.25rem;
+        margin-bottom: 0.75rem;
+        padding: 0.5rem 0;
+        font-size: 0.85rem;
+        display: block;
+        visibility: visible;
+        opacity: 1;
+        position: relative;
+        z-index: 1;
     }
 
     .section-title {
         font-size: 1.4rem;
         margin-bottom: 1rem;
+        margin-top: 0;
     }
 
     .about-terminal {
@@ -271,7 +282,7 @@
 @media (max-width: 480px) {
     .section-full {
         padding: 0.5rem;
-        padding-top: 2.25rem;
+        padding-top: 2.5rem;
     }
 
     #home.section-full {
@@ -283,8 +294,8 @@
     }
 
     .section-content {
-        max-height: calc(100vh - 3.5rem);
-        padding-bottom: 2rem;
+        max-height: calc(100vh - 4.5rem);
+        padding-bottom: 2.5rem;
     }
 
     .terminal-name {
@@ -307,8 +318,14 @@
     }
 
     .terminal-header {
-        font-size: 0.75rem;
-        margin-bottom: 0.35rem;
+        font-size: 0.8rem;
+        margin-bottom: 0.5rem;
+        padding: 0.4rem 0;
+        display: block;
+        visibility: visible;
+        opacity: 1;
+        position: relative;
+        z-index: 1;
     }
 
     .about-terminal {
