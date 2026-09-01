@@ -227,7 +227,7 @@ const experienceData = [
                 title: 'Data, Digital and Innovation Manager',
                 duration: 'Sep 2022 - Present · 3 yrs 5 mos',
                 description:
-                    'Leading a 4-person software engineering and data science team delivering AI-powered tools including agentic adviser copilot and speech to text casenote automation reducing write up time by over 50%, 38,000 casenotes generated. Build and deployed data pipelines. Infrastructure as code for cloud services, continous integration / deployment pipelines, and cloud security.',
+                    'Lead a team of four building an adviser copilot and speech to text casenote automation. 60,000 casenotes generated so far, with write up time down by more than half. The work covers retrieval evaluation, data pipelines, infrastructure as code, continuous integration and deployment, container and auth hardening, and the logging and alarms behind model behaviour.',
                 tech: [
                     'Python',
                     'Typescript',
