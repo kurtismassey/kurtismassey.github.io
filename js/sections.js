@@ -482,7 +482,7 @@ function animateContributionsJSON() {
     output +=
         '  <span class="ts-key">lang</span><span class="ts-operator">:</span> <span class="ts-keyword">string</span>;\n';
     output +=
-        '  <span class="ts-key">stars</span><span class="ts-operator">:</span> <span class="ts-keyword">number</span> <span class="ts-operator">|</span> <span class="ts-keyword">string</span>;\n';
+        '  <span class="ts-key">contribution</span><span class="ts-operator">:</span> <span class="ts-keyword">string</span>;\n';
     output +=
         '  <span class="ts-key">url</span><span class="ts-operator">:</span> <span class="ts-keyword">string</span>;\n';
     output +=
@@ -495,10 +495,6 @@ function animateContributionsJSON() {
 
     contributions.forEach((contrib, index) => {
         const isLast = index === contributions.length - 1;
-        const starsStr =
-            typeof contrib.stars === 'string'
-                ? `"${contrib.stars}"`
-                : contrib.stars;
         const descStr = contrib.desc ? `"${contrib.desc}"` : '""';
 
         const categoryClass =
@@ -509,7 +505,7 @@ function animateContributionsJSON() {
         output += `    <span class="ts-key">repo</span><span class="ts-operator">:</span> <span class="ts-string">"${contrib.repo}"</span>,\n`;
         output += `    <span class="ts-key">desc</span><span class="ts-operator">:</span> <span class="ts-string">${descStr}</span>,\n`;
         output += `    <span class="ts-key">lang</span><span class="ts-operator">:</span> <span class="ts-string">"${contrib.lang}"</span>,\n`;
-        output += `    <span class="ts-key">stars</span><span class="ts-operator">:</span> <span class="ts-number">${starsStr}</span>,\n`;
+        output += `    <span class="ts-key">contribution</span><span class="ts-operator">:</span> <span class="ts-string">"${contrib.contribution}"</span>,\n`;
         output += `    <span class="ts-key">url</span><span class="ts-operator">:</span> <span class="ts-string">"<a href="${contrib.url}" target="_blank" class="ts-link">${contrib.url}</a>"</span>,\n`;
         output += `    <span class="ts-key">category</span><span class="ts-operator">:</span> <span class="ts-string ${categoryClass}">"${contrib.category}"</span>\n`;
         output += `  <span class="ts-brace">}</span>${isLast ? '' : ','}\n`;
