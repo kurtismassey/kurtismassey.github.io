@@ -17,8 +17,8 @@ const colours = {
 
 // Home page category colours
 const homeCategoryColors = {
-    'Applied AI': colours.hotPink,
-    Innovation: colours.orange,
+    Software: colours.hotPink,
+    'Applied AI': colours.orange,
     Data: colours.gold,
     Cloud: colours.green,
     DevOps: colours.skyBlue,

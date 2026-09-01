@@ -100,8 +100,11 @@
 }
 
 /* Home Category Badges */
+/* Sized to the longest label so a badge never resizes as it types. */
 .home-category-badge {
     display: inline-block;
+    min-width: 13ch;
+    text-align: center;
     padding: 0.25rem 0.6rem;
     border: 1px solid;
     border-radius: 4px;
