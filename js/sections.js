@@ -151,7 +151,7 @@ function animateAboutTerminal() {
             bioLine.className = 'terminal-output-line';
             bioLine.style.color = 'var(--text-light)';
             bioLine.style.lineHeight = '1.8';
-            bioLine.style.marginBottom = '1.5rem';
+            bioLine.style.marginBottom = '0.5rem';
             outputContainer.appendChild(bioLine);
             typeTerminalText(bioLine, bio, () => {
                 // Add separator
@@ -159,8 +159,6 @@ function animateAboutTerminal() {
                     const separator = document.createElement('div');
                     separator.className = 'terminal-separator';
                     separator.textContent = '─'.repeat(40);
-                    separator.style.color = 'var(--border-color)';
-                    separator.style.margin = '1.5rem 0';
                     outputContainer.appendChild(separator);
 
                     // Type award title
@@ -203,30 +201,10 @@ function animateAboutTerminal() {
                                                 descLine,
                                                 award.description,
                                                 () => {
-                                                    // Add separator before skills
                                                     setTimeout(() => {
-                                                        const skillsSeparator =
-                                                            document.createElement(
-                                                                'div',
-                                                            );
-                                                        skillsSeparator.className =
-                                                            'terminal-separator';
-                                                        skillsSeparator.textContent =
-                                                            '─'.repeat(40);
-                                                        skillsSeparator.style.color =
-                                                            'var(--border-color)';
-                                                        skillsSeparator.style.margin =
-                                                            '1.5rem 0';
-                                                        outputContainer.appendChild(
-                                                            skillsSeparator,
+                                                        renderSkillsBadges(
+                                                            outputContainer,
                                                         );
-
-                                                        // Add skills badges
-                                                        setTimeout(() => {
-                                                            renderSkillsBadges(
-                                                                outputContainer,
-                                                            );
-                                                        }, 200);
                                                     }, 300);
                                                 },
                                             );
