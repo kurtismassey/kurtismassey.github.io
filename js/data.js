@@ -46,12 +46,12 @@ const homeData = {
 
 // About section content
 const aboutData = {
-    bio: 'Applied AI Engineer and Full-Stack Developer with 5+ years of experience delivering scalable, impactful solutions in high-growth environments. Proven leader in building LLM-powered applications, optimising cloud systems, and driving operational efficiencies. Passionate about innovation, collaboration, and continual learning.',
+    bio: 'Full stack and applied AI engineer. I build retrieval systems and the evaluation harnesses that measure them, agent workflows, speech to text pipelines and named entity recognition models. Day to day I write Python and TypeScript, React and NextJS on the front end, plus Rust and SQL. Infrastructure is CI/CD, containers, IAM and tracing across AWS, Azure and Google Cloud. I lead a small engineering and data science team at Citizens Advice SORT.',
     award: {
-        title: '🏆 Innovation of the Year (2024)',
+        title: '[AWARD] Innovation of the Year (2024)',
         issuer: 'Citizens Advice Annual Conference',
         description:
-            'Human in the loop, retrieval augmented generation, adviser support tool. Achieved 80% advice approval rate, 1.5x increase in client resolution, reduced supervision time to under 4 minutes.',
+            'A human in the loop, retrieval augmented generation tool for advisers. 80% advice approval rate, 1.5x increase in client resolution, supervision time down to under 4 minutes.',
     },
 };
 
