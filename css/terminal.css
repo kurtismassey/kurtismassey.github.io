@@ -36,8 +36,14 @@
     line-height: 1.8;
     font-size: 1rem;
     margin-top: 1.5rem;
-    min-height: 200px;
     transition: opacity 0.3s ease;
+}
+
+/* Reserved so the centred block never resizes as lines stream in.
+   Must exceed the tallest state, which includes the status lines
+   that appear before being removed. */
+#terminal-output {
+    min-height: 300px;
 }
 
 .terminal-output-line {

@@ -13,8 +13,8 @@
         align-items: center;
     }
 
-    #home .terminal-output {
-        min-height: 180px;
+    #terminal-output {
+        min-height: 280px;
     }
 
     .section-content {
@@ -59,7 +59,6 @@
     .terminal-output {
         font-size: 0.85rem;
         margin-top: 0.75rem;
-        min-height: auto;
     }
 
     .terminal-header {
@@ -86,7 +85,6 @@
     }
 
     .about-terminal .terminal-output {
-        min-height: auto;
         margin-top: 0.5rem;
     }
 
@@ -287,10 +285,6 @@
 
     #home.section-full {
         align-items: center;
-    }
-
-    #home .terminal-output {
-        min-height: 160px;
     }
 
     .section-content {
