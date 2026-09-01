@@ -26,6 +26,10 @@
         scroll-behavior: smooth;
     }
 
+    .section-content.stream-layout {
+        padding-bottom: 3.25rem;
+    }
+
     .scroll-indicator {
         bottom: 1rem;
     }
@@ -152,7 +156,7 @@
     }
 
     .experience-terminal {
-        margin-top: 0.75rem;
+        padding-left: 0;
     }
 
     .experience-block {
@@ -205,11 +209,6 @@
         padding: 0.15rem 0.35rem;
     }
 
-    .certifications-terminal {
-        margin-top: 0.75rem;
-        margin-bottom: 0.5rem;
-    }
-
     .cert-terminal-output {
         padding: 0.5rem 0.75rem;
         font-size: 0.75rem;
@@ -257,8 +256,11 @@
         white-space: pre-wrap;
         word-break: break-word;
         overflow-x: hidden;
-        max-height: calc(100vh - 10rem);
         line-height: 1.4;
+    }
+
+    .ts-line {
+        min-height: 1.4em;
     }
 
     .skills-legend {

@@ -157,6 +157,48 @@
     text-shadow: 0 0 8px var(--glow-color);
 }
 
+/* Streaming Window */
+
+/* Fills the section so the window height never needs guessing.
+   Bottom padding reserves room for the scroll indicator. */
+.section-content.stream-layout {
+    height: 100%;
+    max-height: none;
+    padding-bottom: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.stream-layout .stream-window {
+    flex: 1 1 auto;
+    min-height: 0;
+}
+
+.stream-window {
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 255, 136, 0.3) transparent;
+}
+
+.stream-window::-webkit-scrollbar {
+    width: 6px;
+}
+
+.stream-window::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.stream-window::-webkit-scrollbar-thumb {
+    background: rgba(0, 255, 136, 0.3);
+    border-radius: 3px;
+}
+
+.stream-window::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 255, 136, 0.5);
+}
+
 /* About Terminal Style */
 .about-terminal {
     margin-top: 0;
@@ -179,9 +221,7 @@
 
 /* Contributions Output - TypeScript Interface */
 #contributions-output {
-    min-height: auto;
-    max-height: 60vh;
-    overflow-y: auto;
+    margin-top: 0;
     overflow-x: hidden;
     padding: 1.5rem;
     background: rgba(0, 0, 0, 0.4);
@@ -193,26 +233,10 @@
     font-size: 0.85rem;
     line-height: 1.6;
     box-shadow: 0 0 20px rgba(0, 255, 136, 0.1);
-    scrollbar-width: thin;
-    scrollbar-color: rgba(0, 255, 136, 0.3) transparent;
 }
 
-#contributions-output::-webkit-scrollbar {
-    width: 6px;
-    height: 6px;
-}
-
-#contributions-output::-webkit-scrollbar-track {
-    background: transparent;
-}
-
-#contributions-output::-webkit-scrollbar-thumb {
-    background: rgba(0, 255, 136, 0.3);
-    border-radius: 3px;
-}
-
-#contributions-output::-webkit-scrollbar-thumb:hover {
-    background: rgba(0, 255, 136, 0.5);
+.ts-line {
+    min-height: 1.6em;
 }
 
 /* TypeScript Syntax Highlighting */

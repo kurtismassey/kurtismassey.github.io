@@ -4,11 +4,11 @@
 
 /* Experience Terminal */
 .experience-terminal {
-    margin-top: 2rem;
     font-family: "Courier New", "Monaco", monospace;
     max-width: 900px;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 1.75rem;
 }
 
 .experience-block {
@@ -176,14 +176,6 @@
 }
 
 /* Certifications Terminal Style */
-.certifications-terminal {
-    margin-top: 1.5rem;
-    margin-bottom: 2rem;
-    max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 .cert-terminal-output {
     font-family: "Courier New", "Monaco", monospace;
     font-size: 0.9rem;

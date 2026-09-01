@@ -82,6 +82,7 @@ function animateCertifications() {
                             currentIndex + 1,
                         );
                         line.style.opacity = '1';
+                        followStream(line);
                         currentIndex++;
                         setTimeout(typeName, 40);
                     } else {
@@ -103,6 +104,8 @@ function animateCertifications() {
 
         delay += baseDelay * 2;
     });
+
+    setTimeout(() => rewindStream(container), delay + 600);
 }
 
 // Initialise certifications observer
@@ -314,6 +317,7 @@ function renderSkillsBadges(outputContainer) {
             badge.style.transition = 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)';
             badge.style.opacity = '1';
             badge.style.transform = 'scale(1)';
+            followStream(badge);
         }, index * 50);
     });
 
@@ -328,6 +332,7 @@ function renderSkillsBadges(outputContainer) {
 
             setTimeout(() => {
                 cursor.remove();
+                rewindStream(skillsContainer);
             }, 2000);
         },
         allSkills.length * 50 + 200,
@@ -419,10 +424,12 @@ function animateExperienceTerminal() {
     // Second: Animate blocks in sequence
     orgBlocks.forEach((orgBlock, orgIndex) => {
         const delay = 200 + orgIndex * 400;
+        const isLast = orgIndex === orgBlocks.length - 1;
 
         setTimeout(() => {
             orgBlock.style.opacity = '1';
             orgBlock.style.transform = 'translateX(0) scale(1)';
+            followStream(orgBlock);
 
             // Animate tech tags after card appears
             setTimeout(() => {
@@ -435,6 +442,10 @@ function animateExperienceTerminal() {
                         tag.style.transform = 'scale(1)';
                     }, tagIndex * 50);
                 });
+
+                if (isLast) {
+                    setTimeout(() => rewindStream(orgBlock), 400);
+                }
             }, 200);
         }, delay);
     });
@@ -446,7 +457,7 @@ function animateContributionsJSON() {
     if (!outputContainer) return;
 
     // Build type definition
-    let output = '<div class="ts-interface">';
+    let output = '';
 
     // Type definition
     output +=
@@ -489,17 +500,31 @@ function animateContributionsJSON() {
         output += `  <span class="ts-brace">}</span>${isLast ? '' : ','}\n`;
     });
 
-    output += '<span class="ts-brace">]</span>;\n';
-    output += '</div>';
+    output += '<span class="ts-brace">]</span>;';
 
-    // Display immediately
-    outputContainer.innerHTML = output;
-    outputContainer.style.opacity = '0';
+    const interfaceBlock = document.createElement('div');
+    interfaceBlock.className = 'ts-interface';
+    outputContainer.appendChild(interfaceBlock);
 
-    setTimeout(() => {
-        outputContainer.style.transition = 'opacity 0.3s ease';
-        outputContainer.style.opacity = '1';
-    }, 50);
+    const lines = output.split('\n');
+    let lineIndex = 0;
+
+    function streamLine() {
+        const line = document.createElement('div');
+        line.className = 'ts-line';
+        line.innerHTML = lines[lineIndex];
+        interfaceBlock.appendChild(line);
+        followStream(line);
+
+        lineIndex++;
+        if (lineIndex < lines.length) {
+            setTimeout(streamLine, 22);
+        } else {
+            setTimeout(() => rewindStream(line), 500);
+        }
+    }
+
+    streamLine();
 }
 
 // Animate sections on scroll
