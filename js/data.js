@@ -224,8 +224,22 @@ const experienceData = [
         color: colours.green,
         roles: [
             {
+                title: 'Head of Engineering',
+                duration: 'Sep 2026 - Present · 2 mos',
+                description:
+                    'Lead five software engineers and a machine learning engineer. The team builds a suite of tools that support advisers and help them work more effectively. The work covers retrieval and evaluation, speech recognition, supervision and PII redaction. I set the engineering standards and still write and review the code. I also run the cloud platforms, security and prototyping.',
+                tech: [
+                    'Python',
+                    'TypeScript',
+                    'AWS CDK',
+                    'Pulumi',
+                    'GCP',
+                    'Okta',
+                ],
+            },
+            {
                 title: 'Data, Digital and Innovation Manager',
-                duration: 'Sep 2022 - Present · 3 yrs 5 mos',
+                duration: 'Sep 2022 - Sep 2026 · 4 yrs',
                 description:
                     'Lead a team of four building an adviser copilot and speech to text casenote automation. 60,000 casenotes generated so far, with write up time down by more than half. The work covers retrieval evaluation, data pipelines, infrastructure as code, continuous integration and deployment, container and auth hardening, and the logging and alarms behind model behaviour.',
                 tech: [
